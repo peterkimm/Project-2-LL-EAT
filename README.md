@@ -15,4 +15,9 @@ An application that you and your friends can use to virtually plan where you wan
 * <img width="1064" alt="Screen Shot 2022-06-03 at 12 17 00 AM" src="https://user-images.githubusercontent.com/103865078/171806926-91b085cd-9f1c-44a3-b637-b5e77d6c66f3.png">
 
 ## Get Started
-[Click Here]() to see my app!
+[Click Here](https://ll-eat.herokuapp.com/) to see my app!
+
+## Future Enhancements
+* create user login authentication
+* add groups
+* add friend requests function
