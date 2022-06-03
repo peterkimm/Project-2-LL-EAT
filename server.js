@@ -7,7 +7,8 @@ const inputController = require('./controllers/input.js');
 const messagesController = require('./controllers/messages');
 const methodOverride = require('method-override');
 
-
+const PORT = process.env.PORT || 3000;
+const MONGODB_URI = process.env.MONGODB_URI;
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
 	useUnifiedTopology: true,
@@ -49,6 +50,6 @@ app.get('/', (req, res) => {
 
 
 // LISTENER
-app.listen(3000, () => {
-    console.log('listening....');
+app.listen(PORT, () => {
+    console.log('listening....', PORT)
 });
