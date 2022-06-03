@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/inputIndex.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+    <title>LL&EAT</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"><ion-icon name="restaurant-outline"></ion-icon> LL&EAT</div>
+        <div class="navigation">
+            <ul>
+                <li class="navbar">
+                    <a href="/">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="/input/new">
+                        <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+                        <span class="text">Create New Input</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="text">User</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="">
+                        <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+                        <span class="text">Message</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <main>
+            <h2>List of Input</h2>
+            <ul>
+                <% for(let i=0; i < inputs.length; i++){ %>
+                    <li>
+                        <a href="/input/<%= inputs[i]._id %>">
+                            <%= inputs[i].name %>
+                        </a>
+                    </li>
+                    <% } %>
+            </ul>
+        </main>
+    </div>
+</body>
+
+</html>

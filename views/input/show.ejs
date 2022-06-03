@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/show.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+    <title>LL&EAT</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="logo">
+            <ion-icon name="restaurant-outline"></ion-icon> LL&EAT
+        </div>
+        <div class="navigation">
+            <ul>
+                <li class="navbar">
+                    <a href="/">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="/input">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="text">Input Index</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">User</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        </span>
+                        <span class="text">Message</span>
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h1> <%= input.name %>
+        </h1>
+        <main>
+                <table style="width:50%">
+                    <tr>
+                        <th><ion-icon name="fast-food-outline"></ion-icon> Food</th>
+                        <th><ion-icon name="time-outline"></ion-icon> Time</th>
+                        <th><ion-icon name="location-outline"></ion-icon> Location</th>
+                    </tr>
+                    <tr>
+                        <td class="block">
+                            <%= input.food %>
+                        </td>
+                        <td class="block">
+                            <%= input.time %>
+                        </td>
+                        <td class="block">
+                            <%= input.location %>
+                        </td>
+                    </tr>
+                </table>
+        </main>
+        <div class="formEdit">
+            
+                <form action="/input/<%= input._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" />
+                </form>
+           
+                <a href="/input/<%= input._id %>/edit">
+                    <span class="icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </span>
+                    <span class="text">Edit</span>
+                </a>
+            
+        </div>
+    </div>
+</body>
+
+</html>

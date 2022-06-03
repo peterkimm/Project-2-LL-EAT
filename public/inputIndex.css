@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1590897124865-c0f411452242?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTY4fHxyZXN0YXVyYW50cyUyMG5lb258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    backdrop-filter: blur(5px);
+    background-size: contain;
+}
+
+.container {
+    background: #000000d0;
+    opacity: 0.8;
+    background-image: url("https://images.unsplash.com/photo-1590897124865-c0f411452242?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTY4fHxyZXN0YXVyYW50cyUyMG5lb258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    background-size: contain;
+    color: whitesmoke;
+    height: 60vh;
+    width: 100vh;
+    border: 3px solid white;
+    border-radius: 30px;
+    filter: drop-shadow(7px 7px 7px black);
+}
+
+
+.navigation {
+    position: relative;
+    width: 700px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 440px;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: white;
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(-23px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px)
+}
+
+.navigation ul li:hover a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.logo {
+    position: relative;
+    top: 45px;
+    left: 25px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main ul li {
+    list-style: circle;
+}
+
+main ul li a {
+    color: white;
+}
+
+main ul li a:hover {
+    color:#fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff;
+}
