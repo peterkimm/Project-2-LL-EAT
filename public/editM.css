@@ -10,16 +10,18 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1520100021416-5e0301d08ac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHJlc3RhdXJhbnRzJTIwbmVvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
     backdrop-filter: blur(5px);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
     background: #000000d0;
     opacity: 0.8;
-    background-image: url("https://images.unsplash.com/photo-1520100021416-5e0301d08ac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHJlc3RhdXJhbnRzJTIwbmVvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
-    background-size: contain;
+    background-image: url("https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
     color: whitesmoke;
     height: 60vh;
     width: 100vh;
@@ -100,43 +102,12 @@ body {
     left: 25px;
 }
 
-table, th, td {
-    border: 1px solid white;
-    width: 1%;
-    white-space: nowrap;
-}
-
 main {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    margin-top: 180px;
-}
-
-
-h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: whitesmoke;
-
-}
-
-.formEdit {
     position: relative;
-    left: 450px;
+    text-align: center;
     top: 150px;
 }
 
-.formEdit .icon {
-    color: white;
-}
-
-.formEdit a {
-    color: whitesmoke;
-    text-decoration: none;
-}
 
 input[type="submit"]:hover {
     box-shadow: 0 0 10px #fff,
@@ -147,11 +118,13 @@ input[type="submit"]:hover {
     transition: 0.5s;             
 }
 
-.formEdit .text:hover {
-    box-shadow: 0 0 10px #fff,
-                 0 0 20px #fff,
-                 0 0 40px #fff,
-                 0 0 80px #fff,
-                 0 0 120px #fff;
-    transition: 0.5s; 
+h1 {
+    position: relative;
+    text-align: center;
+    top: 90px;
 }
+
+textarea {
+    width: 200px;
+    height: 75px;
+  }

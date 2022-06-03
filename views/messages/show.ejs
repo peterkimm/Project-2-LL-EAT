@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/edit.css">
+    <link rel="stylesheet" href="/showM.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
     <title>LL&EAT</title>
@@ -47,7 +47,7 @@
                         <span class="icon">
                             <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
                         </span>
-                        <span class="text">Message</span>
+                        <span class="text">Messages Index</span>
                     </a>
                 </li>
                 <li class="navbar">
@@ -60,17 +60,29 @@
                 </li>
             </ul>
         </div>
-        <h1>Edit <%= input.name %>'s Info</h1>
+
         <main>
-            <form action="/input/<%= input._id %>?_method=PUT" method="POST">
-                <ion-icon name="person-circle-outline"></ion-icon> <input type="text" name="name" placeholder="name" value="<%= input.name %>" /><br />
-                <ion-icon name="fast-food-outline"></ion-icon> <input type="text" name="food" placeholder="food" value="<%= input.food %>" /><br />
-                <ion-icon name="time-outline"></ion-icon> <input type="text" name="time" placeholder="time" value="<%= input.time %>" /><br />
-                <ion-icon name="location-outline"></ion-icon> <input type="text" name="location" placeholder="location" value="<%= input.location %>" /><br />
-                <input type="submit" value="Update" />
-            </form>
+            <section>
+                <%= message.name %> </br>
+                    <%= message.body %>
+            </section>
         </main>
-    </div>
+        <div class="buttons">
+
+            <section>
+                <form action="/messages/<%=message._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete Message" />
+                </form>
+            </section>
+            <section>
+                <a href="/messages/<%=message._id%>/edit">
+                    <span class="icon">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </span>
+                    <span class="text">Edit</span>
+                </a>
+            </section>
+        </div>
 </body>
 
 </html>

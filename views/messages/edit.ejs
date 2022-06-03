@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/editM.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
     <title>LL&EAT</title>
 </head>
-
 <body>
     <div class="container">
         <div class="logo"><ion-icon name="restaurant-outline"></ion-icon> LL&EAT</div>
@@ -37,7 +35,7 @@
             <li class="navbar">
                 <a href="/messages">
                     <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
-                    <span class="text">Message</span>
+                    <span class="text">Message Index</span>
                 </a>
             </li>
             <li class="navbar">
@@ -48,13 +46,14 @@
             </li>
         </ul>
     </div>
-    <h1>
-        LETS LINK </br>
-        <span class="h1and">AND</span> EAT </br>
-        <span class="h1tog">TOGETHER</span>
-    </h1>
-</div>
-
+    <h1>Edit <%= message.name %>'s Message</h1>
+    <main>
+		<form action="/messages/<%= message._id %>?_method=PUT" method="POST">
+			<input type="text" name="name" value="<%= message.name %>" placeholder="name"/><br />
+			<textarea name="body"><%= message.body %></textarea><br />
+			<input type="submit" value="Update Message" />
+		</form>
+	</main>
+    </div>
 </body>
-
 </html>

@@ -118,7 +118,7 @@ input[type="submit"]:hover {
 }
 
 input[type="text"] {
-    background-color: #b2beb5;
+    background-color: black;
     border: 2px;
     outline: whitesmoke;
     color: white;

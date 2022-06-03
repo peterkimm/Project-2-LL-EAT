@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const inputController = require('./controllers/input.js');
+const messagesController = require('./controllers/messages');
 const methodOverride = require('method-override');
 
 
@@ -22,6 +23,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use('/input', inputController);
+app.use('/messages', messagesController);
 app.use(express.static(__dirname + '/public'));
 
 
